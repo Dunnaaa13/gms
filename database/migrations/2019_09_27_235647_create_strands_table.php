@@ -16,7 +16,6 @@ class CreateStrandsTable extends Migration
         Schema::create('strands', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name');
-            $table->timestamps();
         });
     }
 

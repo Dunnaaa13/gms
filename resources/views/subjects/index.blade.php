@@ -11,9 +11,10 @@
 			<tbody>
 				@foreach($subjects as $subject)
 					<tr>
-						<td>{{ $project->id }}</td>
-						<td>{{ $project->name }}</td>
+						<td>{{ $subjectject->id }}</td>
+						<td>{{ $subject->name }}</td>
 						<td><a href="/subjects/{{ $subject->id }}">View</a></td>
+						<td><a href="/subjects/{{ $subject->id }}/edit">Edit</a></td>
 					</tr>
 				@endforeach
 			</tbody>
