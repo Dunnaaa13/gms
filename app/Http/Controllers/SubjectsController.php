@@ -25,39 +25,12 @@ class SubjectsController extends Controller
             'name' => 'required',
         ]);
         
-    	$project = new Subject;
-    	$project->id = request()->id;
-    	$project->name = request()->name;
-    	$project->save();
+    	$subject = new Subject;
+    	$subject->id = request()->id;
+    	$subject->name = request()->name;
+    	$subject->save();
 
     	return redirect('/subjects');
     }
-
-    public function show(Subject $subject)
-    {
-    	return view('subjects.show')->with('subject', $subject);
-    }
-    
-    public function edit(Subject $subject)
-    {
-        return view('subjects.edit')->with('subject', $subject);
-    }
-
-    public function update(Subject $subject)
-    {
-        $project->id = request()->id;
-    	$project->name = request()->name;
-        $project->save();
-        return redirect('/subjects');
-    }
-
-
-
-
-
-
-
-
-
 }
  

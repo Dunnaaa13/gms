@@ -17,6 +17,7 @@ class CreateSectionTable extends Migration
             $table->bigIncrements('id');
             $table->string('name');
             $table->boolean('is_active');
+            $table->timestamps();
         });
     }
 

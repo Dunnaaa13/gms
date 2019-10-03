@@ -20,6 +20,7 @@ class CreateSubjectstrandsTable extends Migration
             $table->integer('project_id');
             $table->string('semester');
             $table->integer('grade_level');
+            $table->timestamps();
         });
     }
 

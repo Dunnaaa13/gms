@@ -17,7 +17,7 @@ class CreateTeacherTable extends Migration
             $table->bigIncrements('id');
             $table->string('name');
             $table->integer('advisory_section');
-
+            $table->timestamps();
         });
     }
 

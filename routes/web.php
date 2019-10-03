@@ -18,6 +18,6 @@ Route::get('/', function () {
 Route::get('/subjects', 'SubjectsController@index');
 Route::get('/subjects/add', 'SubjectsController@create');
 Route::post('/subjects/store', 'SubjectsController@store');
-Route::get('/subjects/{subject}', 'SubjectsController@show');
-Route::get('/subjects/{subject}/edit', 'SubjectsController@edit');
-Route::post('/subjects/{subject}/update', 'SubjectsController@update');	
+Route::get('/strands', 'StrandsController@index');
+Route::get('/strands/add', 'StrandsController@create');
+Route::post('/strands/store', 'StrandsController@store');
