@@ -6,9 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Teacher extends Model
 {
-    public function subject()
+    public function edit(Teacher $teacher)
     {
-    	return $this->hasMany(Subject::class);
+    	dd($teacher);
     }
     
 }
