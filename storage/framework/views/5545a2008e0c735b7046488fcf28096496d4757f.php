@@ -8,10 +8,31 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <title>Hello, world!</title>
+    <nav class="navbar navbar-dark bg-dark">
+    <ul class="nav">
+      <li class="nav-item">
+        <a class="nav-link <?php echo e(setActive('subject')); ?>" href="/subjects">Subject</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link <?php echo e(setActive('strand')); ?>" href="/strands">Strand</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link <?php echo e(setActive('teacher')); ?>" href="/teachers">Teacher</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link <?php echo e(setActive('section')); ?>" href="/sections">Section</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link <?php echo e(setActive('subjectstrand')); ?>" href="/subject-strands">Subject Strand</a>
+      </li>
+    </ul>
+    </nav>
+
+    <title>GMS</title>
   </head>
   <body>
    <?php echo $__env->yieldContent('content'); ?>
+
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

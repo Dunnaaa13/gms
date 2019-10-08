@@ -28,3 +28,6 @@ Route::get('/teachers/{teacher}/edit', 'TeachersController@edit');
 Route::get('/sections', 'SectionsController@index');
 Route::get('/sections/add', 'SectionsController@create');
 Route::post('/sections/store', 'SectionsController@store');
+Route::get('/subject-strands', 'SubjectStrandsController@index');
+Route::get('/subject-strands/add', 'SubjectStrandsController@create');
+Route::post('/subject-strands/store', 'SubjectStrandsController@store');
