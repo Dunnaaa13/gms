@@ -31,3 +31,7 @@ Route::post('/sections/store', 'SectionsController@store');
 Route::get('/subject-strands', 'SubjectStrandsController@index');
 Route::get('/subject-strands/add', 'SubjectStrandsController@create');
 Route::post('/subject-strands/store', 'SubjectStrandsController@store');
+Route::get('/teacher-loads', 'TeacherLoadsController@index');
+Route::get('/teacher-loads/add', 'TeacherLoadsController@create');
+Route::post('/teacher-loads/store', 'TeacherLoadsController@store');
+Route::get('/teacher-loads/{teacher-load}/edit', 'TeacherLoadsController@update');

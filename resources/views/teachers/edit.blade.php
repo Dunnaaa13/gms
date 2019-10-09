@@ -17,7 +17,7 @@
 			<input value='{{ $teacher-> id }}' type= 'hidden' name= 'id'>
 			<select name= 'advisory_section'>
 				@foreach($sections as $section)
-				<option value='$section=id'> {{ $section -> name }} </option>
+				<option value='$section - id'> {{ $section -> name }} </option>
 				@endforeach
 			</select>
 			<button type="submit" class="btn btn-primary">Submit</button>

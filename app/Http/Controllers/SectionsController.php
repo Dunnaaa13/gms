@@ -23,9 +23,9 @@ class SectionsController extends Controller
         request()->validate([
             'id' => 'required',
             'name' => 'required',
-            'is_active' => 'required',
         ]);
         
+
     	$section = new Section;
     	$section->id = request()->id;
     	$section->name = request()->name;

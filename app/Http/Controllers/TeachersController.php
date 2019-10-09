@@ -1,4 +1,3 @@
-
 <?php
 
 namespace App\Http\Controllers;
@@ -39,6 +38,6 @@ class TeachersController extends Controller
     public function edit(Teacher $teacher)
     {
     	$sections = Section::all();
-        return view('teachers.edit', compact('teacher'));
+        return view('teachers.edit', compact('sections')); ->with ['sections' => $sections];
     }
 }

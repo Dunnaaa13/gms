@@ -8,7 +8,10 @@ class Teacher extends Model
 {
     public function edit(Teacher $teacher)
     {
-    	dd($teacher);
+    	{
+    		$sections = Section::all();
+    		return view('teachers.edit', compact('teacher'));
+    	}
     }
     
 }
