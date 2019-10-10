@@ -34,4 +34,22 @@ class SectionsController extends Controller
 
     	return redirect('/sections');
     }
+    public function show(Section $section)
+    {
+        return view('sections.show')->with('section', $section);
+    }
+    
+    public function edit(Section $section)
+    {
+        return view('sections.edit')->with('section', $section);
+    }
+
+    public function update(Section $section)
+    {
+        $section->id = request()->id;
+        $section->name = request()->name;
+        $section->is_active = request()->is_active;
+        $section->save();
+        return redirect('/sections');
+    }
 }

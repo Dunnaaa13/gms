@@ -40,4 +40,13 @@ class TeachersController extends Controller
     	$sections = Section::all();
         return view('teachers.edit', compact('sections')); ->with ['sections' => $sections];
     }
+
+    public function update(Teacher $teacher)
+    {
+        $teacher->id = request()->id;
+        $teacher->name = request()->name;
+        $teacher->advisory_section = request()->advisory_section;
+        $teacher->save();
+        return redirect('/projects');
+    }
 }

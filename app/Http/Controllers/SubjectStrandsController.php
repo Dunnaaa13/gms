@@ -41,4 +41,23 @@ class SubjectStrandsController extends Controller
     	
     	return redirect('/subject-strands');
 	}
+
+    public function show(Subjectstrand $subjectstrand)
+    {
+        return view('subject-strands.show')->with('subjectstrand', $subjectstrand);
+    }
+    
+    public function edit(Subjectstrand $subjectstrand)
+    {
+        return view('subject-strands.edit')->with('subjectstrand', $subjectstrand);
+    }
+
+    public function update(Subjectstrand $subjectstrand)
+    {
+        $subjectstrand->title = request()->title;
+        $subjectstrand->description = request()->description;
+        $subjectstrand->due_date = request()->due_date;
+        $subjectstrand->save();
+        return redirect('/subject-strands');
+    }
 }

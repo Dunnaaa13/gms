@@ -32,4 +32,22 @@ class StrandsController extends Controller
 
     	return redirect('/strands');
     }
+
+    public function show(Strand $strand)
+    {
+        return view('strands.show')->with('strand', $strand);
+    }
+    
+    public function edit(Strand $strand)
+    {
+        return view('strands.edit')->with('strand', $strand);
+    }
+
+    public function update(Strand $strand)
+    {
+        $strand->id = request()->id;
+        $strand->name = request()->name;
+        $strand->save();
+        return redirect('/strands');
+    }
 }

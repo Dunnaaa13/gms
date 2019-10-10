@@ -7,6 +7,7 @@
 					<th scope="col">User ID</th>
 					<th scope="col">Subject Strand ID</th>
 					<th scope="col">Section ID</th>
+					<th scope="col">Actions</th>
 			</thead>
 			<tbody>
 				@foreach($teacherloads as $teacherload)
@@ -14,6 +15,7 @@
 						<td>{{ $teacherload->user_id }}</td>
 						<td>{{ $teacherload->subject_strand_id }}</td>
 						<td>{{ $teacherload->section_id }}</td>
+						<td><a href="/teacher-loads/{{ $teacherload->user_id }}/edit">Edit</a></
 					</tr>
 				@endforeach
 			</tbody>

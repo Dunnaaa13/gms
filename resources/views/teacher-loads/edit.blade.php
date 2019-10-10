@@ -4,12 +4,16 @@
 		<form method="POST" action="/subjects/{{ $subject->id }}/update">
 		@csrf
 		  <div class="form-group">
-		    <label for="title">ID</label>
-		    <input type="text" class="form-control" name='id' aria-describedby="emailHelp" placeholder="ID">
+		    <label for="user_id">User ID</label>
+		    <input type="text" class="form-control" name='user_id' aria-describedby="emailHelp" placeholder="User ID">
 		  </div>
 		  <div class="form-group">
-		    <label for="name">Name</label>
-		    <input type="text" class="form-control" name="name" placeholder="Name">
+		    <label for="subject_strand_id">Subject Strand ID</label>
+		    <input type="text" class="form-control" name="subject_strand_id" placeholder="Subject Strand ID">
+		  </div>
+		  <div class="form-group">
+		    <label for="section_id">Section ID</label>
+		    <input type="text" class="form-control" name="section_id" placeholder="Section ID">
 		  </div>
 		  <button type="submit" class="btn btn-primary">Submit</button>
 		</form>

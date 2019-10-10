@@ -6,12 +6,14 @@
 				<tr>
 					<th scope="col">ID</th>
 					<th scope="col">Name</th>
+					<th scope="col">Actions</th>
 			</thead>
 			<tbody>
 				@foreach($subjects as $subject)
 					<tr>
 						<td>{{ $subject->id }}</td>
 						<td>{{ $subject->name }}</td>
+						<td><a href="/subjects/{{ $subject->id }}/edit">Edit</a></
 					</tr>
 				@endforeach
 			</tbody>

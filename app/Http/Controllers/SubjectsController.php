@@ -32,5 +32,23 @@ class SubjectsController extends Controller
 
     	return redirect('/subjects');
     }
+
+    public function show(Subject $subject)
+    {
+        return view('subjects.show')->with('subject', $subject);
+    }
+    
+    public function edit(Subject $subject)
+    {
+        return view('subjects.edit')->with('subject', $subject);
+    }
+
+    public function update(Subject $subject)
+    {
+        $subject->id = request()->id;
+        $subject->name = request()->name;
+        $subject->save();
+        return redirect('/subjects');
+    }
 }
  

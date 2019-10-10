@@ -34,4 +34,23 @@ class TeacherLoadsController extends Controller
 
     	return redirect('/teacher-loads');
     }
+
+    public function show(TeacherLoad $teacherload)
+    {
+        return view('teacher-loads.show')->with('teacherload', $teacherload);
+    }
+    
+    public function edit(TeacherLoad $teacherload)
+    {
+        return view('teacher-loads.edit')->with('teacherload', $teacherload);
+    }
+
+    public function update(TeacherLoad $teacherload)
+    {
+        $teacherload->user_id = request()->user_id;
+        $teacherload->subject_strand_id = request()->subject_strand_id;
+        $teacherload->section_id = request()->section_id;
+        $teacherload->save();
+        return redirect('/teacher-loads');
+    }
 }
