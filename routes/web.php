@@ -11,49 +11,52 @@
 |
 */
 
+Route::get('/', 'LoginController@login')->name('login');
+Route::post('/login', 'LoginController@authenticate');
+Route::get('/logout', 'LoginController@logout');
+
 Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/subjects', 'SubjectsController@index');
-Route::get('/subjects/add', 'SubjectsController@create');
-Route::post('/subjects/store', 'SubjectsController@store');
-Route::get('/subjects/{subject}', 'SubjectsController@show');
-Route::get('/subjects/{subject}/edit', 'SubjectsController@edit');
-Route::post('/subjects/{subject}/update', 'SubjectsController@update');
 
-Route::get('/strands', 'StrandsController@index');
-Route::get('/strands/add', 'StrandsController@create');
-Route::post('/strands/store', 'StrandsController@store');
-Route::get('/strands/{strand}', 'StrandsController@show');
-Route::get('/strands/{strand}/edit', 'StrandsController@edit');
-Route::post('/strands/{strand}/update', 'StrandsController@update');
+Route::middleware('auth')->group(function() {
 
-Route::get('/teachers', 'TeachersController@index');
-Route::get('/teachers/add', 'TeachersController@create');
-Route::post('/teachers/store', 'TeachersController@store');
-Route::get('/teachers/{teacher}', 'ProjectsController@show');
-Route::get('/teachers/{teacher}/edit', 'ProjectsController@edit');
-Route::post('/teachers/{teacher}/update', 'ProjectsController@update');
+	Route::get('/subjects', 'SubjectsController@index');
+	Route::get('/subjects/add', 'SubjectsController@create');
+	Route::post('/subjects/store', 'SubjectsController@store');
+	Route::get('/subjects/{subject}/edit', 'SubjectsController@edit');
+	Route::post('/subjects/{subject}/update', 'SubjectsController@update');
 
-Route::get('/sections', 'SectionsController@index');
-Route::get('/sections/add', 'SectionsController@create');
-Route::post('/sections/store', 'SectionsController@store');
-Route::get('/sections/{section}', 'SectionsController@show');
-Route::get('/sections/{section}/edit', 'SectionsController@edit');
-Route::post('/sections/{section}/update', 'SectionsController@update');
+	Route::get('/strands', 'StrandsController@index');
+	Route::get('/strands/add', 'StrandsController@create');
+	Route::post('/strands/store', 'StrandsController@store');
+	Route::get('/strands/{strand}/edit', 'StrandsController@edit');
+	Route::post('/strands/{strand}/update', 'StrandsController@update');
 
-Route::get('/subject-strands', 'SubjectStrandsController@index');
-Route::get('/subject-strands/add', 'SubjectStrandsController@create');
-Route::post('/subject-strands/store', 'SubjectStrandsController@store');
-Route::get('/subject-strands/{subject-strand}', 'SubjectStrandsController@show');
-Route::get('/subject-strands/{subject-strand}/edit', 'SubjectStrandsController@edit');
-Route::post('/subject-strands/{subject-strand}/update', 'SubjectStrandsController@update');
+	Route::get('/teachers', 'TeachersController@index');
+	Route::get('/teachers/add', 'TeachersController@create');
+	Route::post('/teachers/store', 'TeachersController@store');
+	Route::get('/teachers/{teacher}/edit', 'ProjectsController@edit');
+	Route::post('/teachers/{teacher}/update', 'ProjectsController@update');
+
+	Route::get('/sections', 'SectionsController@index');
+	Route::get('/sections/add', 'SectionsController@create');
+	Route::post('/sections/store', 'SectionsController@store');
+	Route::get('/sections/{section}/edit', 'SectionsController@edit');
+	Route::post('/sections/{section}/update', 'SectionsController@update');
+
+	Route::get('/subject-strands', 'SubjectStrandsController@index');
+	Route::get('/subject-strands/add', 'SubjectStrandsController@create');
+	Route::post('/subject-strands/store', 'SubjectStrandsController@store');
+	Route::get('/subject-strands/{subject-strand}/edit', 'SubjectStrandsController@edit');
+	Route::post('/subject-strands/{subject-strand}/update', 'SubjectStrandsController@update');
 
 
-Route::get('/teacher-loads', 'TeacherLoadsController@index');
-Route::get('/teacher-loads/add', 'TeacherLoadsController@create');
-Route::post('/teacher-loads/store', 'TeacherLoadsController@store');
-Route::get('/teacher-loads/{teacher-load}', 'TeacherLoadsController@show');
-Route::get('/teacher-loads/{teacher-load}/edit', 'TeacherLoadsController@edit');
-Route::post('/teacher-loads/{teacher-load}/update', 'TeacherLoadsController@update');
+	Route::get('/teacher-loads', 'TeacherLoadsController@index');
+	Route::get('/teacher-loads/add', 'TeacherLoadsController@create');
+	Route::post('/teacher-loads/store', 'TeacherLoadsController@store');
+	Route::get('/teacher-loads/{teacher-load}/edit', 'TeacherLoadsController@edit');
+	Route::post('/teacher-loads/{teacher-load}/update', 'TeacherLoadsController@update');
+
+});
