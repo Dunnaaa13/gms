@@ -9,21 +9,24 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     <nav class="navbar navbar-dark bg-dark">
-    <ul class="nav">
+    <ul class="nav nav-pills">
       <li class="nav-item">
-        <a class="nav-link <?php echo e(setActive('subject')); ?>" href="/subjects">Subject</a>
+        <a class="nav-link <?php echo e(setActive('subjects')); ?>" href="/subjects">Subject</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link <?php echo e(setActive('strand')); ?>" href="/strands">Strand</a>
+        <a class="nav-link <?php echo e(setActive('strands')); ?>" href="/strands">Strand</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link <?php echo e(setActive('teacher')); ?>" href="/teachers">Teacher</a>
+        <a class="nav-link <?php echo e(setActive('teachers')); ?>" href="/teachers">Teacher</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link <?php echo e(setActive('section')); ?>" href="/sections">Section</a>
+        <a class="nav-link <?php echo e(setActive('sections')); ?>" href="/sections">Section</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link <?php echo e(setActive('subjectstrand')); ?>" href="/subject-strands">Subject Strand</a>
+        <a class="nav-link <?php echo e(setActive('subject-strands')); ?>" href="/subject-strands">Subject Strand</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link <?php echo e(setActive('teacher-loads')); ?>" href="/teacher-loads">Teacher Loads</a>
       </li>
     </ul>
     </nav>

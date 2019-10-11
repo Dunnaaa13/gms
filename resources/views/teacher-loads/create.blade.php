@@ -2,7 +2,7 @@
 @section('content')
 	<div class="container">
 		@include('layouts.errors')
-		<form method="POST" action="/subjects/store">
+		<form method="POST" action="/teacher-loads/store">
 			@csrf
 		  <div class="form-group">
 		    <label for="user_id">User ID</label>

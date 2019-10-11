@@ -14,7 +14,7 @@
 						<td><?php echo e($teacher->id); ?></td>
 						<td><?php echo e($teacher->name); ?></td>
 						<td><?php echo e($teacher->advisory_section); ?></td>
-						<td><a href='/teachers/<?php echo e(teacher); ?>/edit'>Edit</a></td>
+						<td><a href='/teachers/<?php echo e($teacher); ?>/edit'>Edit</a></td>
 					</tr>
 				<?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 			</tbody>

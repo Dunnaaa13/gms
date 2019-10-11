@@ -1,7 +1,7 @@
 @extends('layouts.master')
 @section('content')
 	<div class="container">
-		<form method="POST" action="/subjects/{{ $subject->id }}/update">
+		<form method="POST" action="/subjects/{{ $teacherload->user_id }}/update">
 		@csrf
 		  <div class="form-group">
 		    <label for="user_id">User ID</label>
