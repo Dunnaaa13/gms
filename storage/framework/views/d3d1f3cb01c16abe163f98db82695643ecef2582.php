@@ -5,12 +5,14 @@
 				<tr>
 					<th scope="col">ID</th>
 					<th scope="col">Name</th>
+					<th scope="col">Actions</th>
 			</thead>
 			<tbody>
 				<?php $__currentLoopData = $strands; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $strand): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
 					<tr>
 						<td><?php echo e($strand->id); ?></td>
 						<td><?php echo e($strand->name); ?></td>
+						<td><a href="/strands/<?php echo e($strand->id); ?>/edit">Edit</a></td>
 					</tr>
 				<?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 			</tbody>

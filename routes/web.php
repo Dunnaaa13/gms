@@ -10,18 +10,14 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+/*
 
 Route::get('/', 'LoginController@login')->name('login');
 Route::post('/login', 'LoginController@authenticate');
 Route::get('/logout', 'LoginController@logout');
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
-
 Route::middleware('auth')->group(function() {
-
+*/
 	Route::get('/subjects', 'SubjectsController@index');
 	Route::get('/subjects/add', 'SubjectsController@create');
 	Route::post('/subjects/store', 'SubjectsController@store');
@@ -59,4 +55,4 @@ Route::middleware('auth')->group(function() {
 	Route::get('/teacher-loads/{teacher-load}/edit', 'TeacherLoadsController@edit');
 	Route::post('/teacher-loads/{teacher-load}/update', 'TeacherLoadsController@update');
 
-});
+//});

@@ -5,12 +5,14 @@
 				<tr>
 					<th scope="col">ID</th>
 					<th scope="col">Name</th>
+					<th scope="col">Actions</th>
 			</thead>
 			<tbody>
 				<?php $__currentLoopData = $subjects; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $subject): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
 					<tr>
 						<td><?php echo e($subject->id); ?></td>
 						<td><?php echo e($subject->name); ?></td>
+						<td><a href="/subjects/<?php echo e($subject->id); ?>/edit">Edit</a></
 					</tr>
 				<?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 			</tbody>
